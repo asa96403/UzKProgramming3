@@ -9,6 +9,7 @@ public class Main {
 	/**
 	 * testing code (given, modified)
 	 * @param args
+	 * @author aabert
 	 */
 	public static void main(String[] args) {
 		Message m1 = new Email ();
