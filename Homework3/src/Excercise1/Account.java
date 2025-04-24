@@ -8,6 +8,13 @@ public class Account {
 	String internalNote;
 	
 	//CONSTRUCTORS
+	/**
+	 * Constructor for Account
+	 * @param owner the name of the owner of the account
+	 * @param balance the balance of the account
+	 * @param pin the pin to access the account
+	 * @param internalNote a note used for internal purposes
+	 */
 	public Account(String owner, double balance, int pin, String internalNote){
 		this.owner=owner;
 		this.balance=balance;
@@ -39,4 +46,37 @@ public class Account {
 			System.out.println("The pin is incorrect! Pin change denied!");
 		}
 	}
+
+	
+	//GETTERS AND SETTERS
+	//replace or enable access to variables for other methods
+	
+	public String getOwner() {
+		return owner;
+	}
+
+	public void setOwner(String owner) {
+		this.owner = owner;
+	}
+
+	public int getPin() {
+		return pin;
+	}
+
+	public void setPin(int pin) {
+		this.pin = pin;
+	}
+
+	public String getInternalNote() {
+		return internalNote;
+	}
+
+	public void setInternalNote(String internalNote) {
+		this.internalNote = internalNote;
+	}
+
+	public void setBalance(double balance) {
+		this.balance = balance;
+	}
+
 }

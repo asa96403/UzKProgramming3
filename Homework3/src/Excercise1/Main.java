@@ -5,6 +5,7 @@ import excercise1p2.ExternalAudit;
 
 /**
  * Main class used for testing
+ * @author aabert
  */
 public class Main {
 

@@ -3,6 +3,11 @@ package excercise1p2;
 import Excercise1.Account;
 
 public class ExternalAudit {
+	
+	/**
+	 * tests access to variables from Account
+	 * outprints the variables that can be accessed
+	 */
 	public void test() {
 		Account acc= new Account("Person", 200.50, 1234, "Standard message");
 		System.out.println("-Access-test from ExternalAudit:");
