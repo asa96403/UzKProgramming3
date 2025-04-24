@@ -12,13 +12,19 @@ public class Account {
 	 * Constructor for Account
 	 * @param owner the name of the owner of the account
 	 * @param balance the balance of the account
-	 * @param pin the pin to access the account
+	 * @param pin the pin to access the account, 4 digits
 	 * @param internalNote a note used for internal purposes
 	 */
 	public Account(String owner, double balance, int pin, String internalNote){
+		if(pin<999 || pin>9999) {
+			this.pin=1234;
+			System.out.println("Pin does not have four digits! Set to default.");
+		} else {
+			this.pin=pin;
+		}
 		this.owner=owner;
 		this.balance=balance;
-		this.pin=pin;
+		
 		this.internalNote=internalNote;
 	}
 	
@@ -39,9 +45,14 @@ public class Account {
 		Scanner s= new Scanner(System.in);
 		System.out.println("Enter your current pin:");
 		if(s.nextInt()==pin) {
-			System.out.println("Correct! Enter your new pin:");
-			pin=s.nextInt();
-			System.out.println("Pin changed succesfully!");
+			System.out.println("Correct! Enter your new pin (4 digits):");
+			int input=s.nextInt();
+			if(input<999 || input>9999) {
+				System.out.println("Number does not have four digits! Canceled.");
+			} else {
+				pin=input;
+				System.out.println("Pin changed succesfully!");
+			}
 		} else {
 			System.out.println("The pin is incorrect! Pin change denied!");
 		}
@@ -64,7 +75,11 @@ public class Account {
 	}
 
 	public void setPin(int pin) {
-		this.pin = pin;
+		if(pin<999 || pin>9999) {
+			System.err.println("Nuber does not have four digits! Canceled.");
+		} else {
+			this.pin=pin;
+		}
 	}
 
 	public String getInternalNote() {

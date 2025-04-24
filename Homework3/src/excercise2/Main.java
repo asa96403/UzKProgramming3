@@ -29,7 +29,7 @@ public class Main {
 		if(m instanceof Email) {
 			((Email)m).send();
 		} else {
-			System.out.println("the Message is not an Email");
+			System.out.println("The Message given is not an Email");
 		}
 	}
 
