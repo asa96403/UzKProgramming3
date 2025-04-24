@@ -11,6 +11,7 @@ public class CompanyAccount extends Account {
 	 * @param balance the balance of the account
 	 * @param pin the pin to access the account
 	 * @param internalNote a note used for internal purposes
+	 * @author aabert
 	 */
 	public CompanyAccount(String owner, double balance, int pin, String internalNote) {
 		super(owner, balance, pin, internalNote);
@@ -19,6 +20,7 @@ public class CompanyAccount extends Account {
 	/**
 	 * tests access to variables
 	 * outputs the variable that can be accessed without getters
+	 * @author aabert
 	 */
 	public void test() {
 		System.out.println("-Access-test from CompanyAccount:");

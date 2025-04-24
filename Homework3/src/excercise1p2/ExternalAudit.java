@@ -7,6 +7,7 @@ public class ExternalAudit {
 	/**
 	 * tests access to variables from Account
 	 * outprints the variables that can be accessed
+	 * @author aabert
 	 */
 	public void test() {
 		Account acc= new Account("Person", 200.50, 1234, "Standard message");

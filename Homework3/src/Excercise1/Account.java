@@ -12,8 +12,9 @@ public class Account {
 	 * Constructor for Account
 	 * @param owner the name of the owner of the account
 	 * @param balance the balance of the account
-	 * @param pin the pin to access the account, 4 digits
+	 * @param pin the pin to access the account, 4 digits, if not set to default
 	 * @param internalNote a note used for internal purposes
+	 * @author aabert
 	 */
 	public Account(String owner, double balance, int pin, String internalNote){
 		if(pin<999 || pin>9999) {
@@ -40,6 +41,8 @@ public class Account {
 	
 	/**
 	 * changes the pin to the input value if the correct current pin has been entered before
+	 * checks if pin has 4 digits, if it doesn't input is rejected
+	 * @author aabert
 	 */
 	public void changePin() {
 		Scanner s= new Scanner(System.in);
