@@ -2,10 +2,18 @@ package excercise1p2;
 
 import Excercise1.Account;
 
-public class CompanyAccount extends Account{
+public class CompanyAccount extends Account {
 
-	CompanyAccount(String owner, double balance, int pin, String internalNote) {
+	public CompanyAccount(String owner, double balance, int pin, String internalNote) {
 		super(owner, balance, pin, internalNote);
+	}
+
+	public void test() {
+		System.out.println("-Access-test from CompanyAccount:");
+		System.out.println(owner);
+//		System.out.println(balance); // kein Zugriff
+		System.out.println(pin);
+//		System.out.println(internalNote); // kein Zugriff
 	}
 
 }

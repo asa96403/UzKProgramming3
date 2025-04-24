@@ -34,6 +34,7 @@ public class Account {
 		if(s.nextInt()==pin) {
 			System.out.println("Correct! Enter your new pin:");
 			pin=s.nextInt();
+			System.out.println("Pin changed succesfully!");
 		} else {
 			System.out.println("The pin is incorrect! Pin change denied!");
 		}
